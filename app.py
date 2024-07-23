@@ -7,12 +7,6 @@ import os
 app = Flask(__name__)
 CORS(app)
 
-# 요청 본문 크기 제한 해제 (기본 16MB)
-app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB
-
-# .env 파일 로드
-load_dotenv()
-
 # OpenAI API 키 설정
 openai.api_key = os.getenv('OPENAI_API_KEY')
 
